@@ -11,21 +11,28 @@
 }
 
 
-body{
-  margin:0;
-  font-family:cursive;
-  color:var(--ink);
-  overflow-x:hidden;
+*{ box-sizing:border-box }
+
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+html{
   background:
     radial-gradient(900px 650px at 18% 10%, rgba(246, 8, 51, 0.22), transparent 60%),
     radial-gradient(800px 600px at 78% 18%, rgba(231, 207, 225, 0.1), transparent 62%),
     radial-gradient(900px 700px at 50% 105%, rgba(176, 27, 59, 0.25), transparent 60%),
     linear-gradient(145deg, var(--bg1), var(--bg2));
+  background-attachment: fixed; /* чтобы не “рвалось” при прокрутке */
 }
 
-
-*{ box-sizing:border-box }
-html,body{ height:100% }
+body{
+  font-family:cursive;
+  color:var(--ink);
+  overflow-x:hidden;
+  background: transparent; /* ВАЖНО */
+}
 
 
 .cute{
@@ -310,3 +317,4 @@ input::placeholder{ color: rgba(91,43,59,.45) }
   object-fit: cover;     
   display:block;
 }
+
